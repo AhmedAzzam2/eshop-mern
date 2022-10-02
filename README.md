@@ -59,11 +59,10 @@ then change the isAdmin to false
     "coverage": "jest --coverage",
     "start": "npm run build --prefix client && node server.js",
     "server": "npm run build --prefix client && nodemon server.js",
-    "install": "npm install -f && npm install --prefix client -f",
+    "install": "npm install -f && npm install -f --prefix client",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install -f --prefix client && npm run build --prefix client"
-
   },
 ```
 
