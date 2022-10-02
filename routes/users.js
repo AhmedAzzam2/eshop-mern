@@ -39,18 +39,16 @@ router.post("/register", async (req, res) => {
 //login user with googleId and jwt
 router.post("/login", async (req, res) => {
     try {
-        const user = await User.findOne({email: req.body.email});
+        const user = await User.findOne({ email: req.body.email });
         !user && res.status(404).json("user not found");
 
-        const validPassword = await bcrypt.compare(req.body.password, user.password);
-        !validPassword && res.status(400).json("wrong password");
+        const validated = await bcrypt.compare(req.body.password, user.password);
+        !validated && res.status(400).json("wrong password");
 
         const accessToken = jwt.sign({id: user._id, isAdmin: user.isAdmin},  process.env.JWT_SECRET , {expiresIn: "113d"});
         const {password, ...info} = user._doc;
         res.status(200).json({...info, accessToken});
-        // lastLogin: Date.now() after login
-        user.lastLogin = Date.now();
-        await user.save();
+        await User.updateOne({ _id: user._id }, { $set: { lastLogin: Date.now() } });
     } catch (err) {
         res.status(500).json(err);
     }

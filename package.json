@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {  
-    "test": "jest --watchAll",
+  "scripts": {
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
     "start": "npm run build --prefix client && node server.js",
     "server": "npm run build --prefix client && nodemon server.js",
+    "install": "npm install -f && npm install --prefix client -f",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install -f --prefix client && npm run build --prefix client"
@@ -32,7 +34,7 @@
     "express-jwt": "^6.1.1",
     "express-session": "^1.17.3",
     "helmet": "^5.0.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^8.5.1", 
     "mongoose": "^6.2.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.4",

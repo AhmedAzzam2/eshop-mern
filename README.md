@@ -31,7 +31,7 @@ JWT_SEC = <your_SEC_key>
 ## run the project
 
 ```bash
-npm install -f
+npm run install -f
 npm run server
 localhost:5000
 ```
@@ -48,12 +48,15 @@ then change the url in the appUrl.js file to your server url
 
 ```json
 "scripts": {
-    "test": "jest --watchAll",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
     "start": "npm run build --prefix client && node server.js",
     "server": "npm run build --prefix client && nodemon server.js",
+    "install": "npm install -f && npm install --prefix client -f",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install -f --prefix client && npm run build --prefix client"
+
   },
 ```
 
@@ -61,7 +64,6 @@ then change the url in the appUrl.js file to your server url
 
 ```json
 "scripts": {
-    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage"
   },
@@ -69,7 +71,7 @@ then change the url in the appUrl.js file to your server url
 
 ## Deployment
 
-- [https://eshop-mern.herokuapp.com/](https://eshop-mern.herokuapp.com/)
+## - [https://shop-mern-forjob.herokuapp.com/](https://shop-mern-forjob.herokuapp.com/)
 
 ## Built With
 
