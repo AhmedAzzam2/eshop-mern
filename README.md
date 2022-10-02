@@ -28,7 +28,7 @@ JWT_SECRET=<your_secret_key>
 JWT_SEC = <your_SEC_key>
 ```
 
-## run the project
+## run the project and you can register as admin and add products and categories
 
 ```bash
 npm run install -f
@@ -41,6 +41,13 @@ localhost:5000
 cd client/config
 ```
 then change the url in the appUrl.js file to your server url
+
+## change register as admin
+
+```bash
+cd /models/user.js
+```
+then change the isAdmin to false
 
 
 
