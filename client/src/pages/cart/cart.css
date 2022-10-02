@@ -1,0 +1,65 @@
+.cartd{
+    display: flex;
+}
+.cartd .cart .listCart{
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    flex-direction: column;
+}
+.cartd .cart .listCart img{
+    width: 131px;
+    height: 177px;
+}
+.cartd .cart .listCart .item{
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+}
+.cartd section {
+    flex: 1;
+}
+.cartd .cart .box{
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cartd section button{
+    padding: 12px;
+    border: 0;
+    color: #fff;
+    border-radius: 4px ;
+    background-color: #000;
+    cursor: pointer;
+}
+.cartd section span{
+    font-size: 22px;
+    font-weight: 700;
+    padding: 11px;
+}
+@media (max-width: 768px) {
+    .cartd .cart .listCart .item {
+    display: flex;
+    /* gap: 12px; */
+    /* padding: 12px; */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+}
+
+.cartd .total{
+    width: 312px;
+    font-size: 22px;
+}
+
+.cartd .total button{
+    width: 252px;
+    padding: 12px;
+    border: 0;
+    color: #fff;
+    border-radius: 4px ;
+    background-color: #000;
+    cursor: pointer;
+}

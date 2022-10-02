@@ -1,0 +1,55 @@
+.form{
+
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form form input{
+
+    height: 44px;
+    width: 311px;
+    margin: 11px;
+    border-radius: 11px;
+    border: 0;
+    border-bottom: 4px solid;
+}
+.form button{
+    border: 0;
+    background: black;
+    color: white;
+    padding: 11px 66px;
+    cursor: pointer;
+}
+
+.form button:hover{
+    border: 0;
+    background: rgba(0, 0, 0, 0.616);
+    color: white;
+    padding: 11px 66px;
+
+}
+ .sing{
+    margin: 0 auto;
+ }
+ .sing .singup {
+    background: skyblue;
+    border-radius: 11px;
+    text-align: center;
+    display: flex;
+ }
+ .sing .singup a{
+    background: black;
+    color: white;
+    padding: 11px;
+    border-radius: 12px;
+    margin: 2px;
+    text-decoration: none;
+ }
+
