@@ -1,6 +1,6 @@
 # eshop-mern
 
-
+![](public/uploads/login.gif)
 ## Installation
 
 Clone the repo:
@@ -28,6 +28,22 @@ JWT_SECRET=<your_secret_key>
 JWT_SEC = <your_SEC_key>
 ```
 
+## run the project
+
+```bash
+npm install -f
+npm run server
+localhost:5000
+```
+## config client
+
+```bash
+cd client/config
+```
+then change the url in the appUrl.js file to your server url
+
+
+
 ## Scripts
 
 ```json
@@ -53,10 +69,16 @@ JWT_SEC = <your_SEC_key>
 
 ## Deployment
 
-Deployment information coming soon :)
+- [https://eshop-mern.herokuapp.com/](https://eshop-mern.herokuapp.com/)
 
 ## Built With
 
+- [react](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [formik](https://formik.org/) - Formik is the world's most popular open source form library for React and React Native.
+- [yup]
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start) - DOM bindings for React Router
+- [axios]( https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
+- [react-google-login](https://www.npmjs.com/package/react-google-login) - React Google Login
 - [node](https://nodejs.org/en/about/) - As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
 - [express](https://expressjs.com) - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 - [mongoDB](https://www.mongodb.com) - MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.
@@ -71,9 +93,6 @@ Deployment information coming soon :)
 -[jest](https://jestjs.io/)-  testing framework designed to ensure correctness of any JavaScript codebase. It allows you to write tests with an approachable, familiar and feature-rich API that gives you results quickly
 -[supertest](https://www.npmjs.com/package/supertest) - Supertest module will make api request in jest tests, query our endpoints and return reponses to test conducted
 
-## Contributing
-
-[CONTRIBUTING.md](/CONTRIBUTING.md)
 
 ## Author(s)
 
